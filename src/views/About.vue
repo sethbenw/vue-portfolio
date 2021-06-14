@@ -2,6 +2,27 @@
   <div class="container d-flex flex-wrap">
     <div class="hero-top">
       <p class="">Above all things I love comic books: the characters, the stories, and most of all the art. Artists and Writers alike inspired me to follow my passion of art and creativity which led to my interest in graphic design and web development.</p>
+      
+      <!--div :show="isActive" class="">
+        <div class="employers-apps apps">
+          <div class="app-container">
+            <div
+              v-for="(job, index) in jobs"
+              :key="index"
+              @mouseover="selectIndex(index)"
+              @mouseout="ItemIndex = null"
+              class="app-bkgd"
+            >
+              <a :href="job.link">
+                <div :class="job.employer">
+                  <img :src="getSrc(job.employer)" />
+                </div>
+              </a>
+              <div class="employer">{{ job.employerDisplay }}</div>
+            </div>
+          </div>
+        </div>
+      </div-->
 
       <router-link class="links d-flex justify-content-center mt-5" to="/resume">
         <a class="contact">MY RESUME</a>
@@ -17,6 +38,9 @@
 export default {
   name: 'About',
   components: {},
+  data: {
+    isActive: false
+  },
   data() {
     return {
       jobs: [

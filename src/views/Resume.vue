@@ -10212,9 +10212,14 @@ a.theme-btn-on-bg:hover, a.theme-btn-on-bg:focus, a.theme-btn-on-bg:active, .the
 /* Custom */
 
 .secondary-info a {display:block;transition: .5s;}
+.secondary-info a i {transition: .5s;}
 .secondary-info a:hover {
     transform: translateX(15px);
     text-decoration: none;
+}
+.secondary-info a:hover i {
+  
+  color: #328998;
 }
 
 small.copyright:hover {

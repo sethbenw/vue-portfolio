@@ -1,11 +1,13 @@
 <template>
+<div class="parallax">
   <div class="container">
     <div class="hero">
-      <div class="hero-text">Developer • Designer • Superhero</div>
+      <div class="hero-text"><span class="dev"></span><span class="des"></span><span class="super"></span></div>
       <router-link class="links" to="/resume">
         <a class="contact" href="#">MY RESUME</a>
       </router-link>
     </div>
+  </div>
   </div>
 </template>
 
@@ -71,12 +73,14 @@ export default {
 }
 
 .hero-text {
-
   color: #ccc;
   margin-left: 25px;
   font-size: 5vh;
   text-align: center;
   margin-bottom: 25px;
+}
+.hero-text span:hover {
+  color: #fff;
 }
 
 @media only screen and (max-width: 1440px) {
@@ -96,5 +100,63 @@ export default {
   .hero-text {
     font-size: 7vw;
   }
+}
+
+.dev::before {
+    content: 'Developer • ';
+    animation: fadein 8s;
+    -moz-animation: fadein 8s; /* Firefox */
+    -webkit-animation: fadein 8s; /* Safari and Chrome */
+    -o-animation: fadein 8s; /* Opera */
+
+}
+.des::before {
+    content: 'Designer • ';
+    animation: fadein 12s;
+    -moz-animation: fadein 12s; /* Firefox */
+    -webkit-animation: fadein 12s; /* Safari and Chrome */
+    -o-animation: fadein 12s; /* Opera */
+
+}
+.super::before {
+    content: 'Superhero';
+    animation: fadein 15s;
+    -moz-animation: fadein 15s; /* Firefox */
+    -webkit-animation: fadein 15s; /* Safari and Chrome */
+    -o-animation: fadein 15s; /* Opera */
+
+}
+
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 </style>

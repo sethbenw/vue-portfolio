@@ -2,6 +2,7 @@ import { createRouter, createWebHashHistory, createWebHistory } from 'vue-router
 import Home from '../views/Home.vue'
 import About from '../views/About'
 import Resume from '../views/Resume'
+import NotFound from '../views/404'
 
 const routes = [
   {
